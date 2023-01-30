@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>dls-logformatter &#8212; dls-logformatter 1.0.1.dev1+ge96a5c2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/design-tabs.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="shortcut icon" href="_static/dls-favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API" href="api/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="#">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="_static/dls-logo.svg" class="logo__image only-light" alt="Logo image">
+    <img src="_static/dls-logo.svg" class="logo__image only-dark" alt="Logo image">
+  
+  
+    <p class="title logo__title">dls-logformatter</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="api/index.html">
+                        API
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gitlab.diamond.ac.uk/scisoft/dls-logformatter" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-gitlab"></i></span>
+            <label class="sr-only">GitLab</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="api/index.html">
+                        API
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gitlab.diamond.ac.uk/scisoft/dls-logformatter" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-gitlab"></i></span>
+            <label class="sr-only">GitLab</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="dls-logformatter">
+<h1>dls-logformatter<a class="headerlink" href="#dls-logformatter" title="Permalink to this heading">#</a></h1>
+<p>Python logging formatter for readability.</p>
+<p>Implemented as an override for the logging.Formatter class.</p>
+<p>Intended advantages:</p>
+<ul class="simple">
+<li><p>readable nested traceback exception cause chains</p></li>
+<li><p>compose message for either user, developer or log server</p></li>
+<li><p>reusable library for consistency across multiple projects</p></li>
+</ul>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">diamond</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span><span class="o">/</span><span class="n">scisoft</span><span class="o">/</span><span class="n">dls</span><span class="o">-</span><span class="n">logformatter</span><span class="o">.</span><span class="n">git</span>
+
+<span class="n">dls</span><span class="o">-</span><span class="n">logformatter</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">dls_logformatter.dls_logformatter</span> <span class="kn">import</span> <span class="n">DlsLogform</span>
+
+<span class="c1"># Make handler which writes the logs to console.</span>
+<span class="n">handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
+
+<span class="c1"># Make the formatter from this library.</span>
+<span class="n">dls_logformatter</span> <span class="o">=</span> <span class="n">DlsLogform</span><span class="p">()</span>
+
+<span class="c1"># Let handler write the custom formatted messages.</span>
+<span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">dls_logformatter</span><span class="p">)</span>
+
+<span class="c1"># Let root logger use the handler.</span>
+<span class="n">root_logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
+<span class="n">root_logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="example-output">
+<h2>Example output<a class="headerlink" href="#example-output" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">dls_logformatter</span> <span class="pre">--example</span> <span class="pre">long</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2022</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">25</span> <span class="mi">06</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mf">42.612463</span>   <span class="mi">195</span> <span class="n">MainProcess</span>  <span class="n">MainThread</span>          <span class="mi">0</span>        <span class="mi">0</span> <span class="n">WARNING</span>   <span class="o">/</span><span class="mi">22</span><span class="o">/</span><span class="n">dls</span><span class="o">-</span><span class="n">logformatter</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">dls_logformatter</span><span class="o">/</span><span class="n">__main__</span><span class="o">.</span><span class="n">py</span><span class="p">[</span><span class="mi">35</span><span class="p">]</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">warning</span> <span class="n">message</span>
+<span class="mi">2022</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">25</span> <span class="mi">06</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mf">42.612568</span>   <span class="mi">195</span> <span class="n">MainProcess</span>  <span class="n">MainThread</span>          <span class="mi">0</span>        <span class="mi">0</span> <span class="n">INFO</span>      <span class="o">/</span><span class="mi">22</span><span class="o">/</span><span class="n">dls</span><span class="o">-</span><span class="n">logformatter</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">dls_logformatter</span><span class="o">/</span><span class="n">__main__</span><span class="o">.</span><span class="n">py</span><span class="p">[</span><span class="mi">36</span><span class="p">]</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">info</span> <span class="n">message</span>
+<span class="mi">2022</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">25</span> <span class="mi">06</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mf">42.612609</span>   <span class="mi">195</span> <span class="n">MainProcess</span>  <span class="n">MainThread</span>          <span class="mi">0</span>        <span class="mi">0</span> <span class="n">INFO</span>      <span class="o">/</span><span class="mi">22</span><span class="o">/</span><span class="n">dls</span><span class="o">-</span><span class="n">logformatter</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">dls_logformatter</span><span class="o">/</span><span class="n">__main__</span><span class="o">.</span><span class="n">py</span><span class="p">[</span><span class="mi">37</span><span class="p">]</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">debug</span> <span class="n">message</span>
+<span class="mi">2022</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">25</span> <span class="mi">06</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mf">42.612666</span>   <span class="mi">195</span> <span class="n">MainProcess</span>  <span class="n">MainThread</span>          <span class="mi">0</span>        <span class="mi">0</span> <span class="n">ERROR</span>     <span class="o">/</span><span class="mi">22</span><span class="o">/</span><span class="n">dls</span><span class="o">-</span><span class="n">logformatter</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">dls_logformatter</span><span class="o">/</span><span class="n">__main__</span><span class="o">.</span><span class="n">py</span><span class="p">[</span><span class="mi">42</span><span class="p">]</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">error</span> <span class="n">message</span>
+                                                                             <span class="n">EXCEPTION</span> <span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">deep3</span>
+                                                                             <span class="n">TRACEBACK</span> <span class="o">/</span><span class="mi">22</span><span class="o">/</span><span class="n">dls</span><span class="o">-</span><span class="n">logformatter</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">dls_logformatter</span><span class="o">/</span><span class="n">__main__</span><span class="o">.</span><span class="n">py</span><span class="p">[</span><span class="mi">40</span><span class="p">]</span> <span class="n">deep1</span><span class="p">()</span>
+                                                                             <span class="n">TRACEBACK</span> <span class="o">/</span><span class="mi">22</span><span class="o">/</span><span class="n">dls</span><span class="o">-</span><span class="n">logformatter</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">dls_logformatter</span><span class="o">/</span><span class="n">__main__</span><span class="o">.</span><span class="n">py</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span> <span class="n">deep2</span><span class="p">()</span>
+                                                                             <span class="n">TRACEBACK</span> <span class="o">/</span><span class="mi">22</span><span class="o">/</span><span class="n">dls</span><span class="o">-</span><span class="n">logformatter</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">dls_logformatter</span><span class="o">/</span><span class="n">__main__</span><span class="o">.</span><span class="n">py</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span> <span class="n">deep3</span><span class="p">()</span>
+                                                                             <span class="n">TRACEBACK</span> <span class="o">/</span><span class="mi">22</span><span class="o">/</span><span class="n">dls</span><span class="o">-</span><span class="n">logformatter</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">dls_logformatter</span><span class="o">/</span><span class="n">__main__</span><span class="o">.</span><span class="n">py</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;error in deep3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">dls_logformatter</span> <span class="pre">--example</span> <span class="pre">short</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>        <span class="mi">0</span> <span class="n">WARNING</span>   <span class="n">dls_logformatter</span><span class="o">.</span><span class="n">__main__</span><span class="p">::</span><span class="n">example</span><span class="p">[</span><span class="mi">37</span><span class="p">]</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">warning</span> <span class="n">message</span>
+<span class="mi">0</span>        <span class="mi">0</span> <span class="n">INFO</span>      <span class="n">dls_logformatter</span><span class="o">.</span><span class="n">__main__</span><span class="p">::</span><span class="n">example</span><span class="p">[</span><span class="mi">38</span><span class="p">]</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">info</span> <span class="n">message</span>
+<span class="mi">0</span>        <span class="mi">0</span> <span class="n">INFO</span>      <span class="n">dls_logformatter</span><span class="o">.</span><span class="n">__main__</span><span class="p">::</span><span class="n">example</span><span class="p">[</span><span class="mi">39</span><span class="p">]</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">debug</span> <span class="n">message</span>
+<span class="mi">0</span>        <span class="mi">0</span> <span class="n">ERROR</span>     <span class="n">dls_logformatter</span><span class="o">.</span><span class="n">__main__</span><span class="p">::</span><span class="n">example</span><span class="p">[</span><span class="mi">44</span><span class="p">]</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">error</span> <span class="n">message</span>
+           <span class="n">EXCEPTION</span> <span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">deep3</span>
+           <span class="n">TRACEBACK</span> <span class="n">dls_logformatter</span><span class="o">.</span><span class="n">__main__</span><span class="p">::</span><span class="n">example</span><span class="p">[</span><span class="mi">42</span><span class="p">]</span> <span class="n">deep1</span><span class="p">()</span>
+           <span class="n">TRACEBACK</span> <span class="n">dls_logformatter</span><span class="o">.</span><span class="n">__main__</span><span class="p">::</span><span class="n">deep1</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span> <span class="n">deep2</span><span class="p">()</span>
+           <span class="n">TRACEBACK</span> <span class="n">dls_logformatter</span><span class="o">.</span><span class="n">__main__</span><span class="p">::</span><span class="n">deep2</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span> <span class="n">deep3</span><span class="p">()</span>
+           <span class="n">TRACEBACK</span> <span class="n">dls_logformatter</span><span class="o">.</span><span class="n">__main__</span><span class="p">::</span><span class="n">deep3</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;error in deep3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">dls_logformatter</span> <span class="pre">--example</span> <span class="pre">bare</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">warning</span> <span class="n">message</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">info</span> <span class="n">message</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">debug</span> <span class="n">message</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">error</span> <span class="n">message</span>
+</pre></div>
+</div>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">#</a></h2>
+<p>See <a class="reference external" href="http://www.cs.diamond.ac.uk/reports/gitlab-ci/dls-logformatter/index.html">http://www.cs.diamond.ac.uk/reports/gitlab-ci/dls-logformatter/index.html</a> for more detailed documentation.</p>
+<p>Building and viewing the documents locally:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git clone git+https://gitlab.diamond.ac.uk/scisoft/dls-logformatter.git
+cd dls-logformatter
+virtualenv /scratch/$USER/venv/dls-logformatter
+source /scratch/$USER/venv/dls-logformatter/bin/activate
+pip install -e .[dev,docs]
+make -f .dls-logformatter/Makefile validate_docs
+browse to file:///scratch/$USER/venvs/dls-logformatter/build/html/index.html
+</pre></div>
+</div>
+<p>Topics for further documentation:</p>
+<ul class="simple">
+<li><p>TODO list of improvements</p></li>
+<li><p>change log</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='right-next' id="next-link" href="api/index.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">API</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation">
+   Installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-output">
+   Example output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation">
+   Documentation
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>
