@@ -3,7 +3,7 @@ import multiprocessing
 import threading
 
 # Our library.
-from dls_logformatter.dls_logformatter import DlsLogform
+from dls_logformatter.dls_logformatter import DlsLogformatter
 from dls_logformatter.version import version
 
 root_logger = logging.getLogger()
@@ -26,7 +26,7 @@ class Test_01:
             handler = logging.FileHandler(log_filename, "w")
 
             # Make "long" type formatter.
-            formatter = DlsLogform()
+            formatter = DlsLogformatter()
 
             # Let file handler write custom formatted messages.
             handler.setFormatter(formatter)
@@ -81,7 +81,7 @@ class Test_02:
             console_handler = logging.StreamHandler()
 
             # Make "short" type formatter.
-            short_formatter = DlsLogform(type="short")
+            short_formatter = DlsLogformatter(type="short")
 
             # Let the console write the formatted messages.
             console_handler.setFormatter(short_formatter)
@@ -92,7 +92,7 @@ class Test_02:
             file_handler = logging.FileHandler(log_filename, "w")
 
             # Make "long" type formatter.
-            long_formatter = DlsLogform()
+            long_formatter = DlsLogformatter()
 
             # Let file handler write custom formatted messages.
             file_handler.setFormatter(long_formatter)
@@ -192,7 +192,7 @@ class Test_03:
             console_handler = logging.StreamHandler()
 
             # Make "short" type formatter.
-            short_formatter = DlsLogform(type="short")
+            short_formatter = DlsLogformatter(type="short")
 
             # Let the console write the formatted messages.
             console_handler.setFormatter(short_formatter)
@@ -203,7 +203,7 @@ class Test_03:
             file_handler = logging.FileHandler(log_filename, "w")
 
             # Make "long" type formatter.
-            long_formatter = DlsLogform()
+            long_formatter = DlsLogformatter()
 
             # Let file handler write custom formatted messages.
             file_handler.setFormatter(long_formatter)
@@ -300,7 +300,7 @@ class Test_04:
             file_handler = logging.FileHandler(log_filename, "w")
 
             # Make "long" type formatter.
-            long_formatter = DlsLogform()
+            long_formatter = DlsLogformatter()
 
             # Let file handler write custom formatted messages.
             file_handler.setFormatter(long_formatter)

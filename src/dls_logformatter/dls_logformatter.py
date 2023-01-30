@@ -8,7 +8,7 @@ from dls_logformatter.functions import flatten_exception_message
 
 
 # --------------------------------------------------------------------
-class DlsLogform(logging.Formatter):
+class DlsLogformatter(logging.Formatter):
     """
     This class implements a python logging.Formatter object.
 

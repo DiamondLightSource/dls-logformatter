@@ -70,7 +70,11 @@ jobs:
         run: pipdeptree
 
       - name: Run tests
-        run: pytest
+        run: |
+          sudo apt install environment-modules
+          export MODULESHOME=/usr/share/modules
+          source $MODULESHOME/init/bash
+          pytest
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
@@ -112,7 +116,7 @@ jobs:
 
       - name: Test module --version works using the installed wheel
         # If more than one module in src/ replace with module name to test
-        run: python -m $(ls src | head -1) --version
+        run: python -m $(ls src | grep -v egg-info | head -1) --version
 
   container:
     needs: [lint, dist, test]
@@ -208,4 +212,4 @@ jobs:
         with:
           password: ${{ secrets.PYPI_TOKEN }}
 
-# dae_devops_fingerprint bd6c8766cfdc58f2c6097a2fe4451ec5
+# dae_devops_fingerprint 7796f098557e10a4c2b3cf1440f533d1

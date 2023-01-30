@@ -2,7 +2,7 @@ import json
 import logging
 from argparse import ArgumentParser
 
-from dls_logformatter.dls_logformatter import DlsLogform
+from dls_logformatter.dls_logformatter import DlsLogformatter
 from dls_logformatter.version import meta, version
 
 
@@ -23,7 +23,7 @@ def example(format_type: str) -> None:
     handler = logging.StreamHandler()
 
     # Make the formatter from this library.
-    dls_logformatter = DlsLogform(format_type)
+    dls_logformatter = DlsLogformatter(format_type)
 
     # Let handler write the custom formatted messages.
     handler.setFormatter(dls_logformatter)

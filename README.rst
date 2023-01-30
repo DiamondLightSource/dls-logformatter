@@ -25,13 +25,13 @@ Usage
 
     import logging
 
-    from dls_logformatter.dls_logformatter import DlsLogform
+    from dls_logformatter.dls_logformatter import DlsLogformatter
 
     # Make handler which writes the logs to console.
     handler = logging.StreamHandler()
 
     # Make the formatter from this library.
-    dls_logformatter = DlsLogform()
+    dls_logformatter = DlsLogformatter()
 
     # Let handler write the custom formatted messages.
     handler.setFormatter(dls_logformatter)
