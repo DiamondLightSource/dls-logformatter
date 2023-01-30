@@ -2,5 +2,9 @@
   {
     "version": "master",
     "url": "https://DiamondLightSource.github.io/dls-logformatter/master/"
+  },
+  {
+    "version": "1.0.0",
+    "url": "https://DiamondLightSource.github.io/dls-logformatter/1.0.0/"
   }
 ]
