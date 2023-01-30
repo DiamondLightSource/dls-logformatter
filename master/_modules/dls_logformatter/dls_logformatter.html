@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dls_logformatter.dls_logformatter &#8212; dls-logformatter 0.1.dev5+g57e10a2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/dls_logformatter/dls_logformatter';</script>
+    <link rel="shortcut icon" href="../../_static/dls-favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/dls-logo.svg" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/dls-logo.svg" class="logo__image only-dark" alt="Logo image">
+  
+  
+    <p class="title logo__title">dls-logformatter</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api/index.html">
+                        API
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gitlab.diamond.ac.uk/scisoft/dls-logformatter" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-gitlab"></i></span>
+            <label class="sr-only">GitLab</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../api/index.html">
+                        API
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gitlab.diamond.ac.uk/scisoft/dls-logformatter" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-gitlab"></i></span>
+            <label class="sr-only">GitLab</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <h1>Source code for dls_logformatter.dls_logformatter</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">TracebackType</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">from</span> <span class="nn">dls_logformatter.functions</span> <span class="kn">import</span> <span class="n">flatten_exception_message</span>
+
+
+<span class="c1"># --------------------------------------------------------------------</span>
+<div class="viewcode-block" id="DlsLogform"><a class="viewcode-back" href="../../api/classes.html#dls_logformatter.dls_logformatter.DlsLogform">[docs]</a><span class="k">class</span> <span class="nc">DlsLogform</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class implements a python logging.Formatter object.</span>
+
+<span class="sd">    https://docs.python.org/3/library/logging.html#logging.Formatter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;long&quot;</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            type (str, Optional): type of formatting desired. Defaults to &quot;long&quot;.</span>
+
+<span class="sd">        Values for type can be one of {bare, short, long, dls}</span>
+
+<span class="sd">        - bare</span>
+<span class="sd">            Just the message part, no date/time/process/source.</span>
+<span class="sd">            Typically used for console output to non-technical users.</span>
+
+<span class="sd">        - short</span>
+<span class="sd">            Includes level and source and message, but not date/time/process.</span>
+<span class="sd">            Typically used during debugging to the console from single-process</span>
+<span class="sd">            applications.</span>
+
+<span class="sd">        - long</span>
+<span class="sd">            Full length formatted message.</span>
+<span class="sd">            Typically used for files written to log.</span>
+
+<span class="sd">        - dls</span>
+<span class="sd">            Same as &quot;long&quot; but adds some index-ready attributes to the record.</span>
+<span class="sd">            Typically used with a logging server such as Graylog or Logstash.</span>
+
+<span class="sd">            The names of all the extra attributes begin with &quot;dls-&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_zero</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_last</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_last_log_record_created</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__last_formatted_message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">type_info</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;bare&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;indent&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">},</span>
+            <span class="s2">&quot;dls&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;indent&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="mi">77</span><span class="p">},</span>
+            <span class="s2">&quot;short&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;indent&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="mi">18</span><span class="p">},</span>
+            <span class="s2">&quot;long&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;indent&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="mi">77</span><span class="p">},</span>
+        <span class="p">}</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log_record</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">LogRecord</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Override base method to provide the custom formatting on the given record.</span>
+
+<span class="sd">        See https://docs.python.org/3/library/logging.html</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            log_record (logging.LogRecord): log record</span>
+<span class="sd">                provided by the standard python logging</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: formatted log record</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Being asked to format same record again?</span>
+        <span class="k">if</span> <span class="n">log_record</span><span class="o">.</span><span class="n">created</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_last_log_record_created</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__last_formatted_message</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_last_log_record_created</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">created</span>
+
+        <span class="c1"># Compute delta time since last message.</span>
+        <span class="n">zero_delta</span><span class="p">,</span> <span class="n">last_delta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__sample_instant</span><span class="p">(</span><span class="n">log_record</span><span class="o">.</span><span class="n">created</span><span class="p">)</span>
+
+        <span class="c1"># Format the message using the args provided on the log call.</span>
+        <span class="k">if</span> <span class="n">log_record</span><span class="o">.</span><span class="n">args</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">log_record</span><span class="o">.</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">message_body</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">msg</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">message_body</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">msg</span> <span class="o">%</span> <span class="n">log_record</span><span class="o">.</span><span class="n">args</span>
+
+        <span class="c1"># Allow the method who make the log call to specify what shall be reported.</span>
+        <span class="n">pathname</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">pathname</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">log_record</span><span class="p">,</span> <span class="s2">&quot;caller_pathname&quot;</span><span class="p">):</span>
+            <span class="n">pathname</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">caller_pathname</span>
+
+        <span class="n">funcname</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">funcName</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">log_record</span><span class="p">,</span> <span class="s2">&quot;caller_funcname&quot;</span><span class="p">):</span>
+            <span class="n">funcname</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">caller_funcname</span>
+
+        <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">log_record</span><span class="o">.</span><span class="n">lineno</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lineno</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">lineno</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">log_record</span><span class="p">,</span> <span class="s2">&quot;caller_lineno&quot;</span><span class="p">):</span>
+            <span class="n">lineno</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">caller_lineno</span>
+
+        <span class="n">process</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">log_record</span><span class="o">.</span><span class="n">process</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">process</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">process</span>
+
+        <span class="n">formatted_exception</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">formatException</span><span class="p">(</span><span class="n">log_record</span><span class="o">.</span><span class="n">exc_info</span><span class="p">)</span>
+
+        <span class="n">formatted_stack</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">formatStack</span><span class="p">(</span><span class="n">log_record</span><span class="o">.</span><span class="n">stack_info</span><span class="p">)</span>
+
+        <span class="c1"># We want short format?</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;bare&quot;</span><span class="p">:</span>
+            <span class="n">formatted_message</span> <span class="o">=</span> <span class="n">message_body</span>
+
+        <span class="c1"># We want short format?</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;short&quot;</span><span class="p">:</span>
+            <span class="c1"># Pretty up the filename as a module.</span>
+            <span class="n">module2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__parse_module_from_filename</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span>
+            <span class="n">formatted_message</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%8d</span><span class="s2"> </span><span class="si">%8d</span><span class="s2"> </span><span class="si">%-9s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">::</span><span class="si">%s</span><span class="s2">[</span><span class="si">%d</span><span class="s2">] </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                <span class="n">zero_delta</span><span class="p">,</span>
+                <span class="n">last_delta</span><span class="p">,</span>
+                <span class="n">log_record</span><span class="o">.</span><span class="n">levelname</span><span class="p">,</span>
+                <span class="n">module2</span><span class="p">,</span>
+                <span class="n">funcname</span><span class="p">,</span>
+                <span class="n">lineno</span><span class="p">,</span>
+                <span class="n">message_body</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="c1"># We want long or dls format?</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">formatted_message</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%5d</span><span class="s2"> </span><span class="si">%-12s</span><span class="s2"> </span><span class="si">%-12s</span><span class="s2"> </span><span class="si">%8d</span><span class="s2"> </span><span class="si">%8d</span><span class="s2"> </span><span class="si">%-9s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">[</span><span class="si">%d</span><span class="s2">] </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">formatTime</span><span class="p">(</span><span class="n">log_record</span><span class="p">),</span>
+                <span class="n">process</span><span class="p">,</span>
+                <span class="c1"># Truncate process and thread names if longer than 12.</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">log_record</span><span class="o">.</span><span class="n">processName</span><span class="p">)[:</span><span class="mi">12</span><span class="p">],</span>
+                <span class="nb">str</span><span class="p">(</span><span class="n">log_record</span><span class="o">.</span><span class="n">threadName</span><span class="p">)[:</span><span class="mi">12</span><span class="p">],</span>
+                <span class="n">zero_delta</span><span class="p">,</span>
+                <span class="n">last_delta</span><span class="p">,</span>
+                <span class="n">log_record</span><span class="o">.</span><span class="n">levelname</span><span class="p">,</span>
+                <span class="n">pathname</span><span class="p">,</span>
+                <span class="n">lineno</span><span class="p">,</span>
+                <span class="n">message_body</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="c1"># We want separate indices for a database such as graylog.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;dls&quot;</span><span class="p">:</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_pathname</span> <span class="o">=</span> <span class="n">pathname</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_funcname</span> <span class="o">=</span> <span class="n">funcname</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_lineno</span> <span class="o">=</span> <span class="n">lineno</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_message_body</span> <span class="o">=</span> <span class="n">message_body</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_message</span> <span class="o">=</span> <span class="n">formatted_message</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_message_plus_exception</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">formatted_message</span> <span class="o">+</span> <span class="n">formatted_exception</span>
+            <span class="p">)</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_process</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">process</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_process_name</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">processName</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_thread_name</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">threadName</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_levelname</span> <span class="o">=</span> <span class="n">log_record</span><span class="o">.</span><span class="n">levelname</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_exception</span> <span class="o">=</span> <span class="n">formatted_exception</span>
+            <span class="n">log_record</span><span class="o">.</span><span class="n">dls_stack</span> <span class="o">=</span> <span class="n">formatted_stack</span>
+
+        <span class="n">formatted_message</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">formatted_message</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">formatted_exception</span><span class="p">)</span>
+
+        <span class="n">formatted_message</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">formatted_message</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">formatted_stack</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__last_formatted_message</span> <span class="o">=</span> <span class="n">formatted_message</span>
+        <span class="k">return</span> <span class="n">formatted_message</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">formatTime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log_record</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">LogRecord</span><span class="p">,</span> <span class="n">datefmt</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Override base method to provide the custom date formatting.</span>
+
+<span class="sd">        Ignores the datefmt argument.  Always uses Y-m-d H:M:s.microseconds.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            log_record (logging.LogRecord): log record</span>
+<span class="sd">                provided by the standard python logging</span>
+
+<span class="sd">            datefmt (str, Optional): date format (ignored in this implementation).</span>
+<span class="sd">                Defaults to None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: date/time formatted as Y-m-d H:M:s.microseconds</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span>
+            <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S.&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">log_record</span><span class="o">.</span><span class="n">created</span><span class="p">)</span>
+        <span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%06d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">log_record</span><span class="o">.</span><span class="n">msecs</span> <span class="o">*</span> <span class="mf">1000.0</span><span class="p">)))</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">formatException</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">exc_info</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span>
+            <span class="n">Tuple</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="ne">BaseException</span><span class="p">],</span> <span class="ne">BaseException</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TracebackType</span><span class="p">]],</span>
+            <span class="n">Tuple</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
+            <span class="kc">None</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Override base method to provide the custom exception formatting.</span>
+
+<span class="sd">        Ignores the datefmt argument.  Always uses Y-m-d H:M:s.microseconds.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            exc_info: a standard exception tuple as returned by sys.exc_info()</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: formatted exception</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">exc_info</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exc_info</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="c1"># In the case of &quot;bare&quot;, we don&#39;t print any stack trace.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;bare&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="c1"># First line shall be indented as well as the rest.</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span>
+
+        <span class="c1"># Format the exception into lines list.</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_format_exception_lines</span><span class="p">(</span><span class="n">exc_info</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+        <span class="c1"># Return as single string.</span>
+        <span class="c1"># The lines are indented according to the formatting type.</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_info</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">][</span><span class="s2">&quot;indent&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">_format_exception_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exception</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="ne">BaseException</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Format the exception type and message on one line.</span>
+
+<span class="sd">        In addition, format the traceback on additional lines.</span>
+
+<span class="sd">        Recursively format lines from the exception&#39;s chained cause or context.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            exception (Optional[BaseException]): the exception to format</span>
+<span class="sd">                The case of a None exception is handled by returning</span>
+<span class="sd">                an empty list.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[str]: the exception and its traceback</span>
+<span class="sd">                as list of formatted lines</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># The case of a None exception is handled by returning an empty list.</span>
+        <span class="k">if</span> <span class="n">exception</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+
+        <span class="c1"># Remove newlines from exception message.</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">flatten_exception_message</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span>
+
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%-9s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s2">&quot;EXCEPTION&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">message</span><span class="p">))</span>
+
+        <span class="c1"># Make the stack from the exception&#39;s traceback.</span>
+        <span class="n">stack_summary</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">extract_tb</span><span class="p">(</span><span class="n">exception</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">)</span>
+
+        <span class="c1"># Interate over the frames in the stack.</span>
+        <span class="k">for</span> <span class="n">frame_summary</span> <span class="ow">in</span> <span class="n">stack_summary</span><span class="p">:</span>
+
+            <span class="c1"># Pretty up the filename as a module.</span>
+            <span class="n">module2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__parse_module_from_filename</span><span class="p">(</span><span class="n">frame_summary</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__format_frame_summary</span><span class="p">(</span><span class="n">module2</span><span class="p">,</span> <span class="n">frame_summary</span><span class="p">))</span>
+
+        <span class="c1"># Also append any chained exception.</span>
+        <span class="k">if</span> <span class="n">exception</span><span class="o">.</span><span class="n">__cause__</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_format_exception_lines</span><span class="p">(</span><span class="n">exception</span><span class="o">.</span><span class="n">__cause__</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">exception</span><span class="o">.</span><span class="n">__context__</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_format_exception_lines</span><span class="p">(</span><span class="n">exception</span><span class="o">.</span><span class="n">__context__</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">lines</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">formatStack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stack_info</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Override base method to provide the custom stack formatting on the given record.</span>
+
+<span class="sd">        This implementation does not use the stack_info argument to compose the output.</span>
+<span class="sd">        Instead it uses using traceback.</span>
+
+<span class="sd">        Skips uninteresting stack frames.</span>
+
+<span class="sd">        Returns a single string with newlines in it.</span>
+<span class="sd">        All lines preceded by some spaces of indent.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            stack_info (str): a string as returned by traceback.print_stack()</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: formatted stack, multiple lines separated by newlines and</span>
+<span class="sd">            spaced indentation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">stack_info</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="n">output_lines</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span>
+
+        <span class="n">stack_summary</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">extract_stack</span><span class="p">()</span>
+        <span class="n">first</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">frame_summary</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">stack_summary</span><span class="p">):</span>
+
+            <span class="c1"># Pretty up the filename as a module.</span>
+            <span class="n">module2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__parse_module_from_filename</span><span class="p">(</span><span class="n">frame_summary</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+            <span class="c1"># Skip boring stack entries.</span>
+            <span class="k">if</span> <span class="s2">&quot;/dls_logformatter.py&quot;</span> <span class="ow">in</span> <span class="n">frame_summary</span><span class="o">.</span><span class="n">filename</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">module2</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;logging.&quot;</span><span class="p">):</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># Stop when we hit the interpreter.</span>
+            <span class="k">if</span> <span class="n">module2</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_pytest.&quot;</span><span class="p">):</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">module2</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;python3.&quot;</span><span class="p">):</span>
+                <span class="k">break</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">first</span><span class="p">:</span>
+                <span class="n">output_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__format_frame_summary</span><span class="p">(</span><span class="n">module2</span><span class="p">,</span> <span class="n">frame_summary</span><span class="p">))</span>
+
+            <span class="n">first</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">type_info</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">][</span><span class="s2">&quot;indent&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_lines</span><span class="p">)</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">__parse_module_from_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Find the module part of the filename.</span>
+
+<span class="sd">        Presumes this is the last two parts of the file path.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            filename (str): name of the source file.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: the parsed module name derived from the filename.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Remove backslashes put there from a Windows filesystem.</span>
+        <span class="n">module2</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Keep just last two parts of the path.</span>
+        <span class="n">module2_parts</span> <span class="o">=</span> <span class="n">module2</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">module2_parts</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">module2_parts</span> <span class="o">=</span> <span class="n">module2_parts</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+
+        <span class="c1"># Join path parts with a dot.</span>
+        <span class="n">module2</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">module2_parts</span><span class="p">)</span>
+
+        <span class="c1"># Chop off the .py at the end.</span>
+        <span class="k">if</span> <span class="n">module2</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">):</span>
+            <span class="n">module2</span> <span class="o">=</span> <span class="n">module2</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">module2</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">__format_frame_summary</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">module2</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">frame_summary</span><span class="p">:</span> <span class="n">traceback</span><span class="o">.</span><span class="n">FrameSummary</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Format a single StackSummary to look nice as a single line in the output.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            module2 (str): parsed name of the module</span>
+<span class="sd">            frame_summary (traceback.FrameSummary):</span>
+<span class="sd">                the FrameSummary from traceback.extract_tb to be formatted</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: line of output according to the formatting type we are doing.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">lineno</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">frame_summary</span><span class="o">.</span><span class="n">lineno</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lineno</span> <span class="o">=</span> <span class="n">frame_summary</span><span class="o">.</span><span class="n">lineno</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;short&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%-9s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">::</span><span class="si">%s</span><span class="s2">[</span><span class="si">%d</span><span class="s2">] </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                <span class="s2">&quot;TRACEBACK&quot;</span><span class="p">,</span>
+                <span class="n">module2</span><span class="p">,</span>
+                <span class="n">frame_summary</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="n">lineno</span><span class="p">,</span>
+                <span class="n">frame_summary</span><span class="o">.</span><span class="n">line</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%-9s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">[</span><span class="si">%d</span><span class="s2">] </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                <span class="s2">&quot;TRACEBACK&quot;</span><span class="p">,</span>
+                <span class="n">frame_summary</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span>
+                <span class="n">lineno</span><span class="p">,</span>
+                <span class="n">frame_summary</span><span class="o">.</span><span class="n">line</span><span class="p">,</span>
+            <span class="p">)</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">reset_times</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Reset the time zero point used for reporting elapsed time in log messages.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_zero</span> <span class="o">=</span> <span class="n">now</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_last</span> <span class="o">=</span> <span class="n">now</span>
+
+    <span class="c1"># -----------------------------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">__sample_instant</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">created</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Give deltas from this record since the past record.</span>
+<span class="sd">        The value of created is the time when the LogRecord was created</span>
+<span class="sd">        (as returned by time.time()).</span>
+<span class="sd">        This is only accurate if log records are being produced on the same computer.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_time_zero</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_time_zero</span> <span class="o">=</span> <span class="n">created</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_time_last</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_time_last</span> <span class="o">=</span> <span class="n">created</span>
+
+        <span class="n">zero_delta</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">created</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_time_zero</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1000.0</span><span class="p">)</span>
+        <span class="n">last_delta</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">created</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_time_last</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1000.0</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_time_last</span> <span class="o">=</span> <span class="n">created</span>
+
+        <span class="k">return</span> <span class="n">zero_delta</span><span class="p">,</span> <span class="n">last_delta</span></div>
+</pre></div>
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>
