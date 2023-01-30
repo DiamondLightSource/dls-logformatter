@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>dls-logformatter &#8212; dls-logformatter 1.0.1.dev1+ge96a5c2 documentation</title>
+    <title>dls-logformatter &#8212; dls-logformatter 1.0.1.dev2+g664194c documentation</title>
   
   
   
@@ -305,13 +305,13 @@
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
 
-<span class="kn">from</span> <span class="nn">dls_logformatter.dls_logformatter</span> <span class="kn">import</span> <span class="n">DlsLogform</span>
+<span class="kn">from</span> <span class="nn">dls_logformatter.dls_logformatter</span> <span class="kn">import</span> <span class="n">DlsLogformatter</span>
 
 <span class="c1"># Make handler which writes the logs to console.</span>
 <span class="n">handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
 
 <span class="c1"># Make the formatter from this library.</span>
-<span class="n">dls_logformatter</span> <span class="o">=</span> <span class="n">DlsLogform</span><span class="p">()</span>
+<span class="n">dls_logformatter</span> <span class="o">=</span> <span class="n">DlsLogformatter</span><span class="p">()</span>
 
 <span class="c1"># Let handler write the custom formatted messages.</span>
 <span class="n">handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">dls_logformatter</span><span class="p">)</span>
