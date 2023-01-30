@@ -32,7 +32,7 @@ jobs:
         uses: ./.github/actions/install_requirements
         with:
           requirements_file: requirements-dev-3.x.txt
-          install_options: -e .[dev]
+          install_options: -e .[dev,docs]
 
       - name: Build docs
         run: tox -e docs
@@ -56,4 +56,4 @@ jobs:
           publish_dir: .github/pages
           keep_files: true
 
-# dae_devops_fingerprint 6b5411715603edd7f7de7bb6900955e8
+# dae_devops_fingerprint 5af71ba0709f1b71e804070ecc4bc808

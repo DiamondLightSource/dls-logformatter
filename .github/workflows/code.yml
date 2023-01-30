@@ -28,7 +28,7 @@ jobs:
         uses: ./.github/actions/install_requirements
         with:
           requirements_file: requirements-dev-3.x.txt
-          install_options: -e .[dev]
+          install_options: -e .[dev,docs]
 
       - name: Lint
         run: tox -e pre-commit,mypy
@@ -40,12 +40,12 @@ jobs:
       matrix:
         os: ["ubuntu-latest"] # can add windows-latest, macos-latest
         python: ["3.9", "3.10", "3.11"]
-        install: ["-e .[dev]"]
+        install: ["-e .[dev,docs]"]
         # Make one version be non-editable to test both paths of version code
         include:
           - os: "ubuntu-latest"
             python: "3.8"
-            install: ".[dev]"
+            install: ".[dev,docs]"
 
     runs-on: ${{ matrix.os }}
     env:
@@ -208,4 +208,4 @@ jobs:
         with:
           password: ${{ secrets.PYPI_TOKEN }}
 
-# dae_devops_fingerprint 45cd7e24af4894f218aa5dedbb2e8b43
+# dae_devops_fingerprint bd6c8766cfdc58f2c6097a2fe4451ec5
