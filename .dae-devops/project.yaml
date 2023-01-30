@@ -1,0 +1,17 @@
+# Primary information needed for devops.
+primary:
+    repository_name: dls-logformatter
+    package_name: dls_logformatter
+    one_line_description: "Python logging formatter for readability."
+    author:
+        name: David Erb
+        email: david.erb@diamond.ac.uk
+    project_urls:
+        GitLab: https://gitlab.diamond.ac.uk/scisoft
+    project_scripts:
+        dls-logformatter: "dls_logformatter.__main__:main"
+    dependencies:
+        - type: pypi
+          list:
+              - pyyaml
+              - types-PyYAML
