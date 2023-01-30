@@ -1,5 +1,5 @@
 .. # ********** Please don't edit this file!
-.. # ********** It has been generated automatically by dae_devops version 0.3.3.
+.. # ********** It has been generated automatically by dae_devops version 0.4.0.
 .. # ********** For repository_name dls-logformatter
 
 About the documentation
@@ -21,4 +21,4 @@ improve most documentation - often immensely.
 
 `More information on this topic. <https://documentation.divio.com>`_
 
-.. # dae_devops_fingerprint bb2ab23aef340f83dc119db0d4a910f1
+.. # dae_devops_fingerprint 2aa3cd2b1b893be0ecd1d54952e23cfb

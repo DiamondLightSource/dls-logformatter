@@ -1,3 +1,7 @@
+# ********** Please don't edit this file!
+# ********** It has been generated automatically by dae_devops version 0.4.0.
+# ********** For repository_name dls-logformatter
+
 name: Link Check
 
 on:
@@ -22,3 +26,5 @@ jobs:
 
       - name: Check links
         run: tox -e docs build -- -b linkcheck
+
+# dae_devops_fingerprint ede74702b31ee5395d30fb160b20feaf

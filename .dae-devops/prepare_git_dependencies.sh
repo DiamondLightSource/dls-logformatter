@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ********** Please don't edit this file!
-# ********** It has been generated automatically by dae_devops version 0.3.3.
+# ********** It has been generated automatically by dae_devops version 0.4.0.
 # ********** For repository_name dls-logformatter
 
 me=${BASH_SOURCE}
@@ -13,4 +13,4 @@ function __install {
 }
 
 
-# dae_devops_fingerprint 54342904c9822c5d4e1056d5950b458b
+# dae_devops_fingerprint bb11f8d812be85cd0b48941b57408ee6

@@ -1,5 +1,5 @@
 # ********** Please don't edit this file!
-# ********** It has been generated automatically by dae_devops version 0.3.3.
+# ********** It has been generated automatically by dae_devops version 0.4.0.
 # ********** For repository_name dls-logformatter
 
 from pathlib import Path
@@ -197,4 +197,4 @@ def setup(app):
     app.connect("source-read", ultimateReplace)
 
 
-# dae_devops_fingerprint 47c80e6fab8b85476c0d4bb88ea8bb98
+# dae_devops_fingerprint 3c387338b5ef52a5ddfe4f10a2d05ef6

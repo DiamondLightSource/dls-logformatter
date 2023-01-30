@@ -1,3 +1,7 @@
+# ********** Please don't edit this file!
+# ********** It has been generated automatically by dae_devops version 0.4.0.
+# ********** For repository_name dls-logformatter
+
 import json
 import logging
 from argparse import ArgumentParser
@@ -97,3 +101,5 @@ def main(args=None):
 
 if __name__ == "__main__":
     main()
+
+# dae_devops_fingerprint bf2a290123d494ea549fc46c05e1a6c2

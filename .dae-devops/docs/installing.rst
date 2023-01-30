@@ -1,5 +1,5 @@
 .. # ********** Please don't edit this file!
-.. # ********** It has been generated automatically by dae_devops version 0.3.3.
+.. # ********** It has been generated automatically by dae_devops version 0.4.0.
 .. # ********** For repository_name dls-logformatter
 
 Installing
@@ -40,4 +40,4 @@ You can check the version that has been installed by typing::
     $ dls-logformatter --version
     $ dls-logformatter --version-json
 
-.. # dae_devops_fingerprint e2c75abfdb3864c26dbd84ba6b49f934
+.. # dae_devops_fingerprint b08ec7f6744d94b2f6483adac3c1a3f2

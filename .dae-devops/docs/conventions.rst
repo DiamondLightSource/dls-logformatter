@@ -1,5 +1,5 @@
 .. # ********** Please don't edit this file!
-.. # ********** It has been generated automatically by dae_devops version 0.3.3.
+.. # ********** It has been generated automatically by dae_devops version 0.4.0.
 .. # ********** For repository_name dls-logformatter
 
 Naming conventions
@@ -31,4 +31,4 @@ repository
     lowercase, hyphens
 
 
-.. # dae_devops_fingerprint aafb5c9ca64a53bc9e86a8380cfee4c7
+.. # dae_devops_fingerprint f115b3f73c97c01b18c545914926190d

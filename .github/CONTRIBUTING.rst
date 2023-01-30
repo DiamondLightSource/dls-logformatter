@@ -1,3 +1,7 @@
+.. # ********** Please don't edit this file!
+.. # ********** It has been generated automatically by dae_devops version 0.4.0.
+.. # ********** For repository_name dls-logformatter
+
 Contributing to the project
 ===========================
 
@@ -33,3 +37,5 @@ environment, running the tests and what standards the code and documentation
 should follow.
 
 .. _Developer Guide: https://diamondlightsource.github.io/dls-logformatter/main/developer/how-to/contribute.html
+
+.. # dae_devops_fingerprint 0b1a4607f813b5968cbfdcfef1388f9f

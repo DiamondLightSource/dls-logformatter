@@ -1,3 +1,7 @@
+# ********** Please don't edit this file!
+# ********** It has been generated automatically by dae_devops version 0.4.0.
+# ********** For repository_name dls-logformatter
+
 # This file is for use as a devcontainer and a runtime container
 #
 # The devcontainer should use the build target and run as root with podman
@@ -35,3 +39,5 @@ ENV PATH=/venv/bin:$PATH
 # change this entrypoint if it is not the same as the repo
 ENTRYPOINT ["dls-logformatter"]
 CMD ["--version"]
+
+# dae_devops_fingerprint 8f8056006ef41797278bcc316e9068b0

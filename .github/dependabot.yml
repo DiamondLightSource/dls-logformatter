@@ -1,3 +1,7 @@
+# ********** Please don't edit this file!
+# ********** It has been generated automatically by dae_devops version 0.4.0.
+# ********** For repository_name dls-logformatter
+
 # To get started with Dependabot version updates, you'll need to specify which
 # package ecosystems to update and where the package manifests are located.
 # Please see the documentation for all configuration options:
@@ -14,3 +18,5 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+
+# dae_devops_fingerprint bbe7425f3ad05f705e0eab8cfed6bc66
